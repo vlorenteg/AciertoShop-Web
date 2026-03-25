@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# 🛒 AciertoShop - Demo E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Recreación moderna de una plataforma de comercio electrónico desarrollada previamente para un cliente real, adaptada como proyecto de portfolio.
 
-Currently, two official plugins are available:
+## 🚀 Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+AciertoShop es una aplicación web que simula una tienda online de compra-venta de artículos, inspirada en un proyecto real desarrollado en etapa freelance.  
 
-## React Compiler
+El objetivo de esta recreación es mostrar una implementación moderna utilizando tecnologías actuales, mejorando la experiencia de usuario y la estructura del proyecto.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧠 Contexto del proyecto
 
-## Expanding the ESLint configuration
+Este proyecto está basado en una plataforma real creada entre 2021 y 2023 para un negocio de compraventa de artículos con recogida a domicilio.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+La solución original incluía:
+- Gestión de productos y clientes
+- Plataforma e-commerce en WordPress / Shopify
+- Estrategias de captación digital
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Esta versión es una reconstrucción moderna enfocada a demostrar habilidades técnicas.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tecnologías utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React
+- TypeScript
+- Vite
+- CSS (estilos personalizados)
+- Gestión de estado con hooks (`useState`)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Funcionalidades
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Catálogo de productos dinámico
+- Sistema de carrito de compra
+- Gestión de cantidades por producto
+- Eliminación de productos del carrito
+- Cálculo automático del total
+- Interfaz responsive y moderna
+- Componentes reutilizables
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 Diseño
+
+La interfaz está inspirada en la identidad visual original del negocio, utilizando una paleta de colores basada en verde y blanco para mantener coherencia con el branding real.
+
+## 🌐 Demo
+
+👉 [Ver proyecto en producción](https://aciertoshop-web.vercel.app/)  
+
+## 📁 Instalación local
+
+```bash
+# Clonar repositorio
+git clone https://github.com/tu-usuario/aciertoshop.git
+
+# Entrar en el proyecto
+cd aciertoshop
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en local
+npm run dev
