@@ -1,8 +1,8 @@
 import type { Product } from "../data/products";
 import { mockProducts } from "../data/mockProducts";
 
-const API_URL = import.meta.env.VITE_API_URL;
 const USE_MOCKS = import.meta.env.VITE_USE_MOCKS === "true";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 export async function getProducts(): Promise<Product[]> {
   if (USE_MOCKS) {
@@ -17,13 +17,9 @@ export async function getProducts(): Promise<Product[]> {
     }
 
     const data: Product[] = await response.json();
-
-    return data.map((product) => ({
-      ...product,
-      image: product.image || "/images/default-product.jpg",
-    }));
+    return data;
   } catch (error) {
-    console.error("Error cargando productos desde la API. Usando datos mock.", error);
+    console.error("Error cargando productos desde API. Usando mocks.", error);
     return mockProducts;
   }
 }

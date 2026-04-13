@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Product } from "./data/products";
+import { getProducts } from "./services/products";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProductList from "./components/ProductList";
@@ -15,17 +16,12 @@ function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/products");
-        const data = await response.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("Error cargando productos:", error);
-      }
+    const loadProducts = async () => {
+      const data = await getProducts();
+      setProducts(data);
     };
 
-    fetchProducts();
+    loadProducts();
   }, []);
 
   const addToCart = (product: Product) => {
