@@ -8,7 +8,7 @@ export const mockProducts: Product[] = [
     description: "CAFETERA BOSCH TASSIMO IVY 2",
     stock: 12,
     price: 49.99,
-    image: "/images/cafetera.jpg",
+    image: "cafetera.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const mockProducts: Product[] = [
     description: "CEPILLO BABYLISS SMOOTHING HEATED BRUSH",
     stock: 5,
     price: 34.99,
-    image: "/images/cepillo.jpg",
+    image: "cepillo.jpg",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const mockProducts: Product[] = [
     description: "ENVASADORA AL VACIO ABOX V36",
     stock: 20,
     price: 19.99,
-    image: "/images/envasadora.jpg",
+    image: "envasadora.jpg",
   },
   {
     id: 4,
@@ -35,6 +35,6 @@ export const mockProducts: Product[] = [
     description: "JUEGO DE POKER CON MALETIN",
     stock: 20,
     price: 29.99,
-    image: "/images/poker.jpg",
+    image: "poker.jpg",
   },
 ];
